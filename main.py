@@ -22,7 +22,7 @@ def download_plugins(urls):
     os.mkdir("plugins")
     os.chdir("plugins")
     for url in urls:
-        print(f"Downloading {url.split("/")[-1]}")
+        print(f"Downloading {url.split('/')[-1]}")
         req = get(url, stream=True)
         with open(url.split("/")[-1], "wb") as jar:
             for chunk in req.iter_content(chunk_size=10 * 1000):
