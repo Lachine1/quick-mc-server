@@ -33,8 +33,9 @@ if __name__ == "__main__":
     if not input("Do you agree to Minecraft's EULA? (https://aka.ms/MCUsageGuidelines): ").lower().startswith("y"): exit()
     with open("eula.txt", "w") as eula:
         eula.write("eula=true")
-    latest_build = get_latest_build("1.20.2")
-    download_build("1.20.2", latest_build)
+    version = input("Version to install (1.8.8 to 1.20.4): ")
+    latest_build = get_latest_build(version)
+    download_build(version, latest_build)
     download_plugins(
         ("https://github.com/EssentialsX/Essentials/releases/download/2.20.1/EssentialsX-2.20.1.jar",
         "https://hangarcdn.papermc.io/plugins/ViaVersion/ViaBackwards/versions/4.9.1/PAPER/ViaBackwards-4.9.1.jar",
@@ -42,4 +43,4 @@ if __name__ == "__main__":
         "https://hangarcdn.papermc.io/plugins/Flyte/PluginPortal/versions/1.5.0/PAPER/PluginPortal-1.5.0.jar",
         "https://hangarcdn.papermc.io/plugins/pop4959/Chunky/versions/1.3.136/PAPER/Chunky-1.3.136.jar",
         "https://hangarcdn.papermc.io/plugins/jmp/TabTPS/versions/1.3.22/PAPER/tabtps-spigot-1.3.22.jar"))
-    print("Setup done!\nTo start the server on Linux: cd server && java -jar -Xmx1G -Xms1G paper* (set the 1G to how much RAM you want the server to use)\nTo start the server on Windows: Navigate to server folder and run the Paper file.")
+    print("Setup done!\nTo start the server on Linux: cd server && java -jar -Xmx1G -Xms1G paper* (set 1G to how much RAM you want the server to use)\nTo start the server on Windows: Navigate to server folder and run the Paper file.")
