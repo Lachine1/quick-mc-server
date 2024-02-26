@@ -40,3 +40,4 @@ if __name__ == "__main__":
         "https://hangarcdn.papermc.io/plugins/Flyte/PluginPortal/versions/1.5.0/PAPER/PluginPortal-1.5.0.jar",
         "https://hangarcdn.papermc.io/plugins/pop4959/Chunky/versions/1.3.136/PAPER/Chunky-1.3.136.jar",
         "https://hangarcdn.papermc.io/plugins/jmp/TabTPS/versions/1.3.22/PAPER/tabtps-spigot-1.3.22.jar"))
+    print("Setup done!\nTo start the server on Linux: java -jar -Xmx1G -Xms1G paper* (set the 1G to how much RAM you want the server to use)\nTo start the server on Windows: Navigate to server folder and run the Paper file.")
