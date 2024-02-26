@@ -19,7 +19,7 @@ def download_build(version, build):
     print(f"Download finished")
     del req
 def download_plugins(urls):
-    print("------------------------------------- PLUGINS -------------------------------------")
+    print(f"{"-" * 37} PLUGINS {"-" * 37}")
     os.mkdir("plugins")
     os.chdir("plugins")
     for url in urls:
@@ -34,7 +34,7 @@ if __name__ == "__main__":
     if not input("Do you agree to Minecraft's EULA? (https://aka.ms/MCUsageGuidelines): ").lower().startswith("y"): exit()
     with open("eula.txt", "w") as eula:
         eula.write("eula=true")
-    print("------------------------------------- SERVER -------------------------------------")
+    print(f"{"-" * 37} SERVER {"-" * 37}")
     version = input("Version to install (1.8.8 to 1.20.4): ")
     latest_build = get_latest_build(version)
     download_build(version, latest_build)
