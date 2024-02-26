@@ -31,6 +31,8 @@ def download_plugins(urls):
 
 if __name__ == "__main__":
     if not input("Do you agree to Minecraft's EULA? (https://aka.ms/MCUsageGuidelines): ").lower().startswith("y"): exit()
+    with open("eula.txt", "w") as eula:
+        eula.write("eula=true")
     latest_build = get_latest_build("1.20.2")
     download_build("1.20.2", latest_build)
     download_plugins(
