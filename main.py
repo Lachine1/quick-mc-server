@@ -35,7 +35,7 @@ if __name__ == "__main__":
     with open("eula.txt", "w") as eula:
         eula.write("eula=true")
     print(f"{"-" * 37} SERVER {"-" * 37}")
-    version = input("Version to install (1.8.8 to 1.20.4): ")
+    version = input("Version to install (1.8.8 to 1.20.6): ")
     latest_build = get_latest_build(version)
     download_build(version, latest_build)
     download_plugins(
